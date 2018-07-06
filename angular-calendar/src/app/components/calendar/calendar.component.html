@@ -1,0 +1,69 @@
+<div class="calendar">
+  <div class="toolbar">
+    <button (click)='onPrevMonth()' class="toolbar_action prev">Prev</button>
+    <div class="toolbar_month">{{ displayDate }}</div>
+    <button (click)='onNextMonth()' class="toolbar_action next">Next</button>
+  </div>
+  <div class="calendar-container">
+    <div class="calendar_header">
+      <div>mon</div>
+      <div>tue</div>
+      <div>wed</div>
+      <div>thu</div>
+      <div>fri</div>
+      <div>sat</div>
+      <div>sun</div>
+    </div>
+    <div *ngFor='let calendarWeek of calendarData' class="calendar_week">
+      <app-calendar-day *ngFor='let calendarDay of calendarWeek' 
+        [day]='calendarDay' 
+        [className]="calendarDay.isInMonth ? 'calendar_day' : 'calendar_another_month_day'">
+    </app-calendar-day> 
+    </div><!--
+    <div class="calendar_week">
+      
+      <div class="calendar_day day">2</div>
+      <div class="calendar_day day">3</div>
+      <div class="calendar_day day">4</div>
+      <div class="calendar_day day">5</div>
+      <div class="calendar_day day">6</div>
+      <div class="calendar_day day">7</div>
+    </div>
+    <div class="calendar_week">
+      <div class="calendar_day day">8</div>
+      <div class="calendar_day day">9</div>
+      <div class="calendar_day day">10</div>
+      <div class="calendar_day day">11</div>
+      <div class="calendar_day day">12</div>
+      <div class="calendar_day day">13</div>
+      <div class="calendar_day day">14</div>        
+    </div>
+    <div class="calendar_week">
+      <div class="calendar_day day">15</div>
+      <div class="calendar_day day">16</div>
+      <div class="calendar_day day">17</div>
+      <div class="calendar_day day">18</div>
+      <div class="calendar_day day">19</div>
+      <div class="calendar_day day">20</div>
+      <div class="calendar_day day">21</div>    
+    </div>
+    <div class="calendar_week">
+      <div class="calendar_day day">22</div>
+      <div class="calendar_day day">23</div>
+      <div class="calendar_day day">24</div>
+      <div class="calendar_day day">25</div>
+      <div class="calendar_day day">26</div> 
+      <div class="calendar_day day">27</div> 
+      <div class="calendar_day day">28</div> 
+    </div>
+    <div class="calendar_week">
+      <div class="calendar_day day">29</div>
+      <div class="calendar_day day">30</div>
+      <div class="calendar_day day">31</div>
+      <div class="calendar_day day">1</div>
+      <div class="calendar_day day">2</div>
+      <div class="calendar_day day">3</div>
+      <div class="calendar_day day">4</div>
+    </div>-->
+  </div>
+</div>

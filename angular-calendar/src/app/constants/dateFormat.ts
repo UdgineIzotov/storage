@@ -1,0 +1,1 @@
+export const MON_YEAR_FORMAT = 'MMMM YYYY';

@@ -1,0 +1,11 @@
+.app {
+    display: flex;
+
+    &-calendar {
+        width: 80%;
+    }
+
+    &-events {
+        width: 20%;
+    }
+}
