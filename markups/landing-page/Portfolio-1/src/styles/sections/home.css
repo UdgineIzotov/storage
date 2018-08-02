@@ -1,0 +1,59 @@
+/**
+ * HOME section
+ */
+ .home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--home-main-color);
+  background: url(/images/profile-avatar.png) no-repeat 70% center,
+              repeating-linear-gradient(
+                  -67deg,
+                  var(--home-stripe-color),
+                  var(--home-stripe-color) 10%,
+                  var(--home-shadow-stripe-color) 10%,
+                  var(--home-shadow-stripe-color) 20%
+              ) 100% 100%;
+}
+
+/* align for left line */
+.profiler-name {
+  position: relative;
+  left: -6px;
+}
+
+.know-more,
+.hire-me {
+  width: 160px;
+}
+
+.to-bottom-btn {
+  position: absolute;
+  left: var(--website-sides-padding);
+  bottom: var(--website-sides-padding);
+  width: 36px;
+  height: 36px;
+  border: var(--bold-border);
+  color: var(--home-main-color);
+  background: transparent;
+  overflow: hidden;
+}
+
+.to-bottom-btn::before {
+  content: "\2193";
+  display: block;
+  font-size: 30px;
+  position: absolute;
+  top: 16px;
+  left: 8px;
+  line-height: 0;
+}
+
+.profiler-expert-item:after {
+  content: ' / ';
+  display: inline;
+}
+
+.profiler-expert-item:last-child:after {
+  display: none;
+}

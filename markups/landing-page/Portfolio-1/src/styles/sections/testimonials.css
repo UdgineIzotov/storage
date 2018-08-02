@@ -1,0 +1,73 @@
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.people-testimonials {
+  margin-top: 150px;
+  padding: 0 var(--website-sides-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials-block {
+  margin-top: 30px;
+  padding: 40px 100px;
+  width: 100%;
+  border: var(--border);
+}
+
+.testimonial-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.person-info {
+  margin-left: 20px;
+}
+
+.testimonial-tabs-block {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.testimonial-btn { 
+  height: 12px;
+  width: 12px;
+  padding: 0;
+  background: transparent;
+  border: var(--border);
+}
+
+.testimonial-btn.active {
+  background: #000;
+}
+
+.testimonial-sumup {
+  padding: 50px var(--website-sides-padding);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: #F5F5F5;
+}
+
+.testimonial-sumup-item-icon {
+  height: 100px;
+  width: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+}
+
+.testimonial-sumup-item-icon.delivery-complete {
+  background-position: 65%;
+}
+
+
+

@@ -1,0 +1,23 @@
+body {
+    position: relative;
+    overflow: hidden;
+    color: var(--home-main-color)
+}
+
+@import "./variables.css";
+@import "./reset.css";
+@import "./typography.css";
+@import "./icons.css";
+@import "./general.css";
+
+@import "./libs/animate.css";
+
+@import "./header.css";
+@import "./footer.css";
+@import "./sections/about.css";
+@import "./sections/home.css";
+@import "./sections/service.css";
+@import "./sections/skills.css";
+@import "./sections/portfolio.css";
+@import "./sections/testimonials.css";
+@import "./sections/contact.css";

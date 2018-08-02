@@ -1,0 +1,41 @@
+/**
+ * ABOUT BLOCK
+ */
+ .about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.about-info-block {
+  padding-right: 70px;
+  width: 50%;
+}
+
+.about-info-block .block-caption {
+  margin-bottom: 30px;
+}
+
+.download-cv {
+  margin-top: 40px;
+}
+
+.about-image-block {
+  width: 50%;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-image-block {
+    display: none;
+  }
+
+  .about-info-block {
+    width: 100%;
+  }
+}

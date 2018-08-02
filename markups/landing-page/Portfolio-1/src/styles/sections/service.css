@@ -1,0 +1,35 @@
+/**
+ * SERVICE section
+ */
+ .service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--service-bg);
+}
+
+.service-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.service-list-item {
+  width: 33%;
+  margin-bottom: 40px;
+}
+
+.service-name {
+  text-align: center;
+}
+
+.service-image {
+  height: 100px;
+  width: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+}

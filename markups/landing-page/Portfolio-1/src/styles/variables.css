@@ -1,0 +1,22 @@
+:root {
+  --website-sides-padding: 10%;
+
+  --main-text-line-height: 67px;
+
+  --home-shadow-stripe-color: #DEDEDE;
+  --home-stripe-color: #E2E2E2;
+
+  --home-main-color: #4D4D4D;
+
+  --white: white;
+
+  --service-bg: #F6F6F6;
+
+  --border-color: #4D4D4D;
+  --border: 1px solid var(--border-color);
+  --white-border: 1px solid white;
+  --bold-border: 2px solid  var(--border-color);
+  --bold-white-border: 2px solid  white;
+
+  --media-tablet: 768px;
+}

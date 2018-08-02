@@ -1,0 +1,64 @@
+.contact {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(/images/contact-bg.png) no-repeat ;
+  background-size: cover;
+}
+
+.contact-form {
+  margin-top: 40px;
+  width: 760px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-perconal-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-name,
+.contact-email {
+  padding-left: 10px;
+  height: 57px;
+  width: 47%;
+}
+
+.contact-message {
+  margin-top: 40px;
+  padding: 10px;
+  height: 200px;
+  width: 100%;
+  resize: none;
+}
+
+.contact-submit-btn {
+  width: 125px;
+  margin: 40px auto;
+
+}
+
+.to-top-btn {
+  position: absolute;
+  right: var(--website-sides-padding);
+  bottom: var(--website-sides-padding);
+  width: 36px;
+  height: 36px;
+  border: var(--bold-white-border);
+  color: white;
+  background: transparent;
+  overflow: hidden;
+}
+
+.to-top-btn::before {
+  content: "\2191";
+  display: block;
+  font-size: 30px;
+  position: absolute;
+  top: 16px;
+  left: 8px;
+  line-height: 0;
+}

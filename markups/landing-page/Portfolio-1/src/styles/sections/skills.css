@@ -1,0 +1,32 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-chart-block {
+  height: 500px;
+  width: 700px;
+}
+
+.highcharts-credits {
+  display: none;
+}
+
+.highcharts-plot-background {
+  fill: #f1f1f1
+}
+
+.highcharts-area {
+  fill: white;
+}
+
+.highcharts-graph {
+  stroke: rgba(255, 255, 255, .4)
+}
+
+.image-skill {
+  position: relative;
+  left: -14px;
+}

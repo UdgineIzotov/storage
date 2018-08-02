@@ -1,0 +1,117 @@
+html  
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    
+    title Portfolio
+  body
+    .wrapper
+      header
+        h1.logo: img(src="/images/logo.svg" alt="logo")
+        button.mobile-header-btn
+        nav.nav
+          ul.nav-tabs.general-typo
+            li: a(href="#home").nav-link.general-typo.active.capitalize home
+            li: a(href="#about").nav-link.general-typo.uppercase about
+            li: a(href="#service").nav-link.general-typo.uppercase service
+            li: a(href="#portfolio").nav-link.general-typo.uppercase portfolio
+            li: a(href="#testimonials").nav-link.general-typo.uppercase testimonials
+            li: a(href="#contact").nav-link.general-typo.uppercase contact
+      section.full-screen.home#home
+        .home-info-block
+          .profiler-name.main-heading-typo Luis Oenrique
+          .profiler-expert
+            span.profiler-expert-item.main-heading-tip-typo.capitalize user experience 
+            span.profiler-expert-item.main-heading-tip-typo.capitalize user interface expert
+          .profiler-actions
+            button.white-btn.know-more know more
+            button.no-background-btn.hire-me hire me
+            button.to-bottom-btn
+      section.full-screen.about#about
+            .about-info-block
+              h2.block-caption.section-heading-typo.overlined-left.wow.bounceInLeft know more about me
+              .general-typo.wow.bounceInLeft(data-wow-delay=".2s") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit delectus libero laborum nam veniam, vero, id beatae consequuntur rerum itaque expedita labore fugit fuga iusto, recusandae ab nisi accusamus tempora repellat esse sequi consectetur aliquam! Obcaecati, quo in consequatur aut nihil ad dolorem maiores! Nam pariatur tempora molestiae mollitia eum!
+              button.no-background-btn.download-cv.wow.bounceInLeft(data-wow-delay=".4s") download my cv
+            //todo: remove unnecessary block   
+            .about-image-block.wow.bounceInRight: img.about-image(src="/images/about.png" alt="about")
+      section.full-screen.service#service
+        h2.block-caption.section-heading-typo services
+        ul.service-list
+          li.service-list-item.wow.zoomIn
+            .service-image.user-search
+            .service-name.capitalize user research
+            ul.services-list
+          li.service-list-item.wow.zoomIn(data-wow-delay=".1s")
+            .service-image.list
+            .service-name.capitalize IA and wireframes
+          li.service-list-item.wow.zoomIn(data-wow-delay=".2s")
+            .service-image.driving-man
+            .service-name.capitalize user testing
+          li.service-list-item.wow.zoomIn(data-wow-delay=".3s")
+            .service-image.pile
+            .service-name.capitalize Looks and Feel Design (UI)
+          li.service-list-item.wow.zoomIn(data-wow-delay=".4s")
+            .service-image.tablet-list
+            .service-name.capitalize Delivery
+          li.service-list-item.wow.zoomIn(data-wow-delay=".5s")
+            .service-image.spot
+            .service-name.capitalize Integration Support
+      section.full-screen.skills#skills
+        h2.block-cation.section-heading-typo my skills
+        .skills-chart-block#skills-chart
+      section.full-screen.portfolio#portfolio
+        h2.block-caption.section-heading-typo portfolio
+        .works-block
+          a(href="#").work-item: img.work-image.wow.flipInY(src="/images/works/1.png", alt="wokr1")
+          a(href="#").work-item: img.work-image.wow.flipInY(src="/images/works/2.png", alt="wokr2" data-wow-delay=".2s")
+          a(href="#").work-item: img.work-image.wow.flipInY(src="/images/works/3.png", alt="wokr3" data-wow-delay=".4s")
+          a(href="#").work-item: img.work-image.wow.flipInY(src="/images/works/4.png", alt="wokr4" data-wow-delay=".6s")
+          a(href="#").work-item: img.work-image.wow.flipInY(src="/images/works/5.png", alt="wokr5" data-wow-delay=".8s")
+          a(href="#").work-item: img.work-image.wow.flipInY(src="/images/works/6.png", alt="wokr6" data-wow-delay="1s")
+        button.white-btn.load-more load more  
+      section.full-screen.testimonials#testimonials
+        .people-testimonials
+          h2.block-caption.section-heading-typo testimonials
+          .testimonials-block
+            .testimonial-item
+              img(src="/images/testimonial-avatar1.png").person-avatar
+              .person-info  
+                .person-name.card-caption.uppercase limara tusi
+                .person-position.card-tip.uppercase ceo, random-company 
+                .person-testimonal.general-typo Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, odio odit. Aliquam, eligendi magnam modi, pariatur tenetur veniam nesciunt voluptatibus quasi cupiditate, accusantium quaerat aut laboriosam veritatis tempore qui eius ipsa ea corrupti? Quo, quas?
+            .testimonial-tabs-block
+              button.testimonial-btn
+              button.testimonial-btn.active
+              button.testimonial-btn
+        ul.testimonial-sumup.uppercase
+          //- TODO: add testimonials 
+          li.testimonial-sumup-item
+            .testimonial-sumup-item-icon.study.wow.bounceInLeft(data-wow-delay=".6s")
+            .testimonial-sumup-item-count 120
+            .testimonial-sumup-item-name hands to work
+          li.testimonial-sumup-item
+            .testimonial-sumup-item-icon.happiness.wow.bounceInLeft(data-wow-delay=".4s")
+            .testimonial-sumup-item-count 310
+            .testimonial-sumup-item-name happy client
+          li.testimonial-sumup-item
+            .testimonial-sumup-item-icon.delivery-complete.wow.bounceInLeft(data-wow-delay=".2s")
+            .testimonial-sumup-item-count 510
+            .testimonial-sumup-item-name finished projects
+          li.testimonial-sumup-item.wow
+            .testimonial-sumup-item-icon.cup.wow.bounceInLeft
+            .testimonial-sumup-item-count 720
+            .testimonial-sumup-item-name cups of coffe
+      section.full-screen.contact#contact
+        h2.white.block-caption.section-heading-typo say hello
+        from.contact-form
+          .contact-perconal-info
+            input.contact-name.input-text.wow.bounceInLeft(type="text", name="name" placeholder="Name")        
+            input.contact-email.input-text.wow.bounceInRight(type="text", name="email" placeholder="Email")
+          textarea.contact-message.input-text.wow.bounceInUp(name="message" placeholder="Message")
+          button.white-btn.contact-submit-btn.wow.bounceInUp(type="submit" data-wow-delay=".1s") send
+          button.to-top-btn
+      footer
+        .media-block
+          //TODO: add media links         
+        .copyright.uppercase 2018. all right reserved

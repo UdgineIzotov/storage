@@ -1,0 +1,56 @@
+@font-face {
+  font-family: Asap;
+  src: url(/fonts/asap.ttf),
+       url(/fonts/asap.ttf) format('truetype');
+}
+
+.main-heading-typo {
+  font: bold 90px/var(--main-text-line-height) Asap;
+}
+
+.section-heading-typo {
+  font: bold 46px/var(--main-text-line-height) Asap;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.main-heading-tip-typo {
+  font: bold 22px/var(--main-text-line-height) Asap;
+}
+
+.testimonial-sumup {
+  font: bold 22px/44px Asap;
+  text-align: center;
+}
+
+.service-name {
+  font: 24px/50px Asap;
+}
+
+.card-caption {
+  font: 30px Asap;
+}
+
+.card-tip {
+  font: italic 12px Asap;
+}
+
+button {
+  font: 16px/50px Asap;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--home-main-color)
+}
+
+.general-typo {
+  font: 16px/32px Asap;
+}
+
+
+.input-text {
+  font: 16px Asap;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+

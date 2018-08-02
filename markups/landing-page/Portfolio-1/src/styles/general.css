@@ -1,0 +1,62 @@
+.full-screen {
+  height: 100vh;
+}
+
+.home, .about, .service, .skills, .portfolio, .contact {
+  padding: 0 var(--website-sides-padding);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block-caption {
+  position: relative;
+}
+
+.block-caption.white {
+  color: white;
+}
+
+.block-caption.white::before {
+  background: white;
+}
+
+.block-caption::before {
+  position: absolute;
+  display: inline;
+  left: 50%;
+  height: 4px;
+  width: 30px;
+  content: '';
+  border-radius: 2px;
+  background: var(--border-color);
+  transform: translate(-50%, 0)
+}
+
+.block-caption.overlined-left::before {
+  left: 0;
+  transform: none;
+}
+
+.white-btn {
+  border: none;
+  background: var(--white);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.no-background-btn {
+  background: transparent;
+  border: var(--border);
+}
+
+
+

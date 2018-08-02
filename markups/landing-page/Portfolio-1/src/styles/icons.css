@@ -1,0 +1,41 @@
+
+.cup {
+  background-image: url(/images/icons/cup.svg);
+}
+
+.delivery-complete{
+  background-image: url(/images/icons/delivery-complete.svg);
+}
+
+.user-search {
+  background-image: url(/images/icons/user-search.svg);
+}
+
+.driving-man{
+  background-image: url(/images/icons/driving-man.svg);
+}
+
+.happiness{
+  background-image: url(/images/icons/happiness.svg);
+}
+
+.list{
+  background-image: url(/images/icons/list.svg);
+}
+
+.pile{
+  background-image: url(/images/icons/pile.svg);
+}
+
+.spot{
+  background-image: url(/images/icons/spot.svg);
+
+}
+
+.tablet-list{
+  background-image: url(/images/icons/tablet-list.svg);
+}
+
+.study {
+  background-image: url(/images/icons/study.svg);
+}

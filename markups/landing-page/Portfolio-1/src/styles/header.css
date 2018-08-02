@@ -1,0 +1,49 @@
+/**
+ * Header
+ */
+ header {
+  padding: 10px var(--website-sides-padding);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+}
+
+.white .nav-link {
+  color: white;
+}
+
+.white .nav-link.active,
+.white .nav-link.active:hover {
+  border-bottom: var(--bold-white-border);
+}
+
+.white .nav-link:hover {
+  border-bottom: var(--white-border);
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-link {
+  margin-right: 20px;
+  padding-bottom: 5px;
+  color: var(--home-main-color);
+}
+
+.nav-link.active,
+.nav-link.active:hover {
+  border-bottom: var(--bold-border);
+}
+
+.mobile-header-btn {
+  display: none;
+}
+
+.nav-link:hover {
+  border-bottom: var(--border);
+}
