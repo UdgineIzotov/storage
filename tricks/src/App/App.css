@@ -1,0 +1,55 @@
+:root {
+  --tricks-color-link: #51299e;
+  --tricks-shadow-color: rgba(132, 170, 255, .4);
+  --tricks-shadow-hover-color: rgba(0, 251, 239, .4);
+}
+
+.main-page {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(auto-fill, 150px);
+}
+
+.link-to-trick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  width: 170px;
+  height: 80px;
+  
+  border: 2px solid var(--tricks-color-link);
+  box-shadow: 0 0 15px var(--tricks-shadow-color);
+  color: var(--tricks-color-link);
+  box-sizing: border-box;
+
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+
+  transition: .5s;
+}
+
+.link-to-trick:hover {
+  box-shadow: 0 0 15px var(--tricks-shadow-hover-color);
+}
+
+@media screen and (min-width: 360px) {
+  .main-page {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-page {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-page {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

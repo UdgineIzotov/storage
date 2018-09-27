@@ -1,0 +1,43 @@
+.background {
+  font-family: 'Ceviche One', cursive;
+  background: url(./cutout-text.jpg);
+  min-width: 700px;
+  min-height: 466px;
+  position: relative;
+}
+
+.message-wrapper {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+
+  border: 4px solid black;
+}
+
+.message {
+  height: 66px;
+  width: 146px;
+  text-transform: uppercase;
+}
+
+.black-and-white {
+  color: white;
+  background: black;
+  mix-blend-mode: multiply;
+
+  font-size: 46px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 65px;  
+}
+
+.white-and-black { 
+  background: white;
+  mix-blend-mode: screen;
+
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 65px;
+
+}
