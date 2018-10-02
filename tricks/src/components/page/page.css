@@ -1,7 +1,40 @@
+:root {
+  --return-color-link: #51299e;
+  --return-shadow-color: rgba(187, 119, 216, .4);
+  --return-shadow-hover-color: rgba(9, 250, 162, .4);
+}
+
 .page {
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.link-return {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 80px;
+  
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 0 15px var(--return-shadow-color);
+  color: var(--return-color-link);
+  box-sizing: border-box;
+
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+
+  transition: .5s;
+}
+
+.link-return:hover {
+  box-shadow: 0 0 15px var(--return-shadow-hover-color);
 }
