@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
 import { availableUrls } from '../../router';
 
-import './page.css';
-
+import classes from './page.css';
+console.log(classes)
 export const Page = ({ customClass, children }) => (
   <div className={ classnames("page", customClass) }>
     <Link to={availableUrls.DEFAULT} className="link-return">  Return </Link>

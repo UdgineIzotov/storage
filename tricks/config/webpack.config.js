@@ -46,7 +46,7 @@ const useTypeScript = fs.existsSync(paths.appTsConfig);
 
 // style files regexes
 const cssRegex = /\.css$/;
-const cssModuleRegex = /\.module\.css$/;
+const cssModuleRegex = /\.scope\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 
@@ -436,7 +436,8 @@ module.exports = function(webpackEnv) {
                 importLoaders: 1,
                 sourceMap: isEnvProduction && shouldUseSourceMap,
                 modules: true,
-                getLocalIdent: getCSSModuleLocalIdent,
+                localIdentName: isEnvProduction ? '[hash:base64:5]' : '[local]-[hash:base64:5]',
+                camelCase: true
               }),
             },
             // Opt-in support for SASS (using .scss or .sass extensions).

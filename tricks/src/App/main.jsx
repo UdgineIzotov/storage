@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { availableUrls } from '../router/url'
+import { availableUrls } from '../router/url';
 
+import classes from './app.scope.css';
+console.log(classes)
 export class Main extends Component {
 
   render = () => { 

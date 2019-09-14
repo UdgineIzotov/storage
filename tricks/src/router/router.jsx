@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { v4 as uuid } from 'uuid';
-import { connect } from 'react-redux';
 
 import { routes } from './routes';
 
@@ -18,28 +17,12 @@ const AnimatedRoutes = withRouter(
       </CSSTransition>
     </TransitionGroup>
   )
+);
 
-)
+export const AppRouter = () => (
+  <Router>
+    <AnimatedRoutes />
+  </Router>
+);
 
-
-export class AppRouter extends Component {
-
-  render = () => {
-    const id = uuid();
-    console.log(id);
-    return (
-      <Router>
-        <AnimatedRoutes />
-      </Router>
-    );
-  }
-}
-
-const mapStateToProps = (a, b) => {
-
-  console.log(a, b);
-  return {};
-}
-
-export default connect(mapStateToProps)(Router)
-
+export default Router

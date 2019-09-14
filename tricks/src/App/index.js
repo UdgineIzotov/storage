@@ -1,3 +1,3 @@
 export { Main } from './main';
 
-export { App } from './App';
+export { App } from './app';
