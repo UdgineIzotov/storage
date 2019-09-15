@@ -14,6 +14,7 @@ export class Main extends Component {
       <div className={classes.mainPage}>
         <Link to={ availableUrls.CUTOUT_TEXT } className={classes.linkToTrick}>Cutout text</Link>
         <Link to={ availableUrls.ANIMATED_TEXT } className={classes.linkToTrick}>Animated text</Link>
+        <Link to={ availableUrls.SKEWED_CARDS } className={classes.linkToTrick}>Skewed cards</Link>
       </div>
     );
   }
