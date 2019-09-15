@@ -1,0 +1,159 @@
+:root {
+  --animation-time: 2s;
+  --tricks-shadow-color: rgba(132, 170, 255, .4);
+  --tricks-shadow-hover-color: rgba(0, 251, 239, .4);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:  
+    "you-are you-are"
+    "breath taking";
+  grid-row-gap: 3vh;
+}
+
+#you-are {
+  grid-area: you-are;
+  justify-self: center;
+  animation: fill ease-in-out 1s forwards 2s;
+}
+
+#breath {
+  grid-area: breath;
+  justify-self: end;
+  animation: fill ease-in-out 1s forwards 2.5s;
+
+}
+
+#taking {
+  grid-area: taking;
+  justify-self: start;
+  animation: fill ease-in-out 1s forwards 3s;
+
+}
+
+/* YOU ARE */
+
+#you-are path:nth-child(1) {
+  stroke-dasharray: 257.3758544921875;
+  stroke-dashoffset: 257.3758544921875;
+  animation: draw var(--animation-time) ease forwards ;
+}
+
+#you-are path:nth-child(2) {
+  stroke-dasharray: 319.7336730957031;
+  stroke-dashoffset: 319.7336730957031;
+  animation: draw var(--animation-time) ease forwards .2s;
+}
+
+#you-are path:nth-child(3) {
+  stroke-dasharray: 311.8675537109375;
+  stroke-dashoffset: 311.8675537109375;
+  animation: draw var(--animation-time) ease forwards .4s;
+}
+
+#you-are path:nth-child(4) {
+  stroke-dasharray: 295.4827575683594;
+  stroke-dashoffset: 295.4827575683594;
+  animation: draw var(--animation-time) ease forwards .6s;
+}
+
+#you-are path:nth-child(5) {
+  stroke-dasharray: 324.1749267578125;
+  stroke-dashoffset: 324.1749267578125;
+  animation: draw var(--animation-time) ease forwards .8s;
+}
+
+#you-are path:nth-child(6) {
+  stroke-dasharray: 273.5278015136719;
+  stroke-dashoffset: 273.5278015136719;
+  animation: draw var(--animation-time) ease forwards 1s;
+}
+
+/* BREATH */
+
+#breath path:nth-child(1) {
+  stroke-dasharray: 326.2890319824219;
+  stroke-dashoffset: 326.2890319824219;
+  animation: draw var(--animation-time) ease forwards 2s;
+}
+
+#breath path:nth-child(2) {
+  stroke-dasharray: 324.1746826171875;
+  stroke-dashoffset: 324.1746826171875;
+  animation: draw var(--animation-time) ease forwards 2s;
+}
+
+#breath path:nth-child(3) {
+  stroke-dasharray: 273.5277099609375;
+  stroke-dashoffset: 273.5277099609375;
+  animation: draw var(--animation-time) ease forwards 2s;
+}
+
+#breath path:nth-child(4) {
+  stroke-dasharray: 295.482666015625;
+  stroke-dashoffset: 295.482666015625;
+  animation: draw var(--animation-time) ease forwards 2s;
+}
+
+#breath path:nth-child(5) {
+  stroke-dasharray: 227.79547119140625;
+  stroke-dashoffset: 227.79547119140625;
+  animation: draw var(--animation-time) ease forwards 2s;
+}
+
+#breath path:nth-child(6) {
+  stroke-dasharray: 330.8270263671875;
+  stroke-dashoffset: 330.8270263671875;
+  animation: draw var(--animation-time) ease forwards 2s;
+}
+
+/* TAKING */
+
+#taking path:nth-child(1) {
+  stroke-dasharray: 203.7147979736328;
+  stroke-dashoffset: 203.7147979736328;
+  animation: draw var(--animation-time) ease forwards 2s;
+}
+
+#taking path:nth-child(2) {
+  stroke-dasharray: 284.7147521972656;
+  stroke-dashoffset: 284.7147521972656;
+  animation: draw var(--animation-time) ease forwards 2.2s;
+}
+
+#taking path:nth-child(3) {
+  stroke-dasharray: 283.4085388183594;
+  stroke-dashoffset: 283.4085388183594;
+  animation: draw var(--animation-time) ease forwards 2.4s;
+}
+
+#taking path:nth-child(4) {
+  stroke-dasharray: 181.31845092773438;
+  stroke-dashoffset: 181.31845092773438;
+  animation: draw var(--animation-time) ease forwards 2.6s;
+}
+
+#taking path:nth-child(5) {
+  stroke-dasharray: 270.47528076171875;
+  stroke-dashoffset: 270.47528076171875;
+  animation: draw var(--animation-time) ease forwards 2.6s;
+}
+
+#taking path:nth-child(6) {
+  stroke-dasharray: 360.171875;
+  stroke-dashoffset: 360.171875;
+  animation: draw var(--animation-time) ease forwards 2.8s;
+}
+
+
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes fill {
+  from { fill: transparent; }
+  to { fill: #EC7700}
+}

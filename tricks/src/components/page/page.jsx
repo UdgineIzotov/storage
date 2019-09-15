@@ -8,7 +8,7 @@ import classes from './page.css';
 console.log(classes)
 export const Page = ({ customClass, children }) => (
   <div className={ classnames("page", customClass) }>
-    <Link to={availableUrls.DEFAULT} className="link-return">  Return </Link>
+    <Link to={availableUrls.HOME} className="link-return">  Return </Link>
     {children}
   </div>
 );

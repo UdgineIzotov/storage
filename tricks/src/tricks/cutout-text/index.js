@@ -1,2 +1,2 @@
-export { CutoutText } from './cutout-text';
 export { CutoutTextPage } from './cutout-text';
+export { CutoutText } from './cutout-text';

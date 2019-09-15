@@ -1,27 +1,20 @@
 import React from 'react';
-
+import classnames from 'classnames'
 import { Page } from '../../components/page';
 
-import './cutout-text.css';
+import classes from './cutout-text.scope.css';
 
 export const CutoutText = () => (
-  <Page>
-    <div className="background">
-      <div className="message-wrapper">
-        <div className="message black-and-white">cutout</div>
-        <div className="message white-and-black">text</div>
+    <div className={classes.background}>
+      <div className={classes.messageWrapper}>
+        <div className={classnames(classes.message, classes.blackAndWhite)}>cutout</div>
+        <div className={classnames(classes.message, classes.whiteAndBlack)}>text</div>
       </div>
     </div>
-  </Page>
 );
 
 export const CutoutTextPage = () => (
   <Page>
-    <div className="background">
-      <div className="message-wrapper">
-        <div className="message black-and-white">cutout</div>
-        <div className="message white-and-black">text</div>
-      </div>
-    </div>
+    <CutoutText />
   </Page>
 )
