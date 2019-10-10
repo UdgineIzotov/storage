@@ -1,5 +1,6 @@
 'use strict';
 
+console.log('called')
 const fs = require('fs');
 const path = require('path');
 const paths = require('./paths');
@@ -8,19 +9,15 @@ const paths = require('./paths');
 delete require.cache[require.resolve('./paths')];
 
 const NODE_ENV = process.env.NODE_ENV;
-if (!NODE_ENV) {
-  throw new Error(
-    'The NODE_ENV environment variable is required but was not specified.'
-  );
-}
+if (!NODE_ENV) { throw new Error('The NODE_ENV environment variable is required but was not specified.'); }
+
+console.log(NODE_ENV);
 
 // https://github.com/bkeepers/dotenv#what-other-env-files-can-i-use
 var dotenvFiles = [
   `${paths.dotenv}.${NODE_ENV}.local`,
   `${paths.dotenv}.${NODE_ENV}`,
-  // Don't include `.env.local` for `test` environment
-  // since normally you expect tests to produce the same
-  // results for everyone
+  // Don't include `.env.local` for `test` env. You expect tests to produce the same results for everyone
   NODE_ENV !== 'test' && `${paths.dotenv}.local`,
   paths.dotenv,
 ].filter(Boolean);
@@ -40,6 +37,8 @@ dotenvFiles.forEach(dotenvFile => {
   }
 });
 
+console.log(dotenvFiles);
+
 // We support resolving modules according to `NODE_PATH`.
 // This lets you use absolute paths in imports inside large monorepos:
 // https://github.com/facebook/create-react-app/issues/253.
@@ -50,11 +49,13 @@ dotenvFiles.forEach(dotenvFile => {
 // https://github.com/facebook/create-react-app/issues/1023#issuecomment-265344421
 // We also resolve them to make sure all tools using them work consistently.
 const appDirectory = fs.realpathSync(process.cwd());
+console.log(appDirectory);
 process.env.NODE_PATH = (process.env.NODE_PATH || '')
   .split(path.delimiter)
   .filter(folder => folder && !path.isAbsolute(folder))
   .map(folder => path.resolve(appDirectory, folder))
   .join(path.delimiter);
+  
 
 // Grab NODE_ENV and REACT_APP_* environment variables and prepare them to be
 // injected into the application via DefinePlugin in Webpack configuration.

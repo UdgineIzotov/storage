@@ -9,6 +9,7 @@
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-template-rows: auto;
   grid-column-gap: 40px;
+  grid-row-gap: 40px;
 }
 
 .box {
@@ -42,6 +43,9 @@
 .box:nth-child(3)::before {
   background: linear-gradient(315deg, #e91e63, #5d02ff);
 }
+.box:nth-child(4)::before {
+  background: linear-gradient(315deg, #f632E8, #fad360);
+}
 
 .content {
   position: relative;
@@ -49,7 +53,7 @@
   padding: 20px;
 }
 
-.content h2 {
+.card-number {
   position: absolute;
   top: -70px;
   right: 20px;
@@ -60,11 +64,11 @@
   transition: .3s;
 }
 
-.box:hover .content h2 {
+.box:hover .card-number {
   top: -120px;
 }
 
-.content h3 {
+.card-caption {
   margin: 0 0 15px;
   padding: 0;
   font-size: 24px;
@@ -72,7 +76,7 @@
   color: #fff;
 }
 
-.content p {
+.card-content {
   margin: 0;
   padding: 0;
   color: #fff;
@@ -80,7 +84,7 @@
   line-height: 1.5;
 }
 
-.content a {
+.btn-more {
   position: relative;
   margin: 20px 0 0;
   padding: 10px 20px;
@@ -88,19 +92,20 @@
   border: 1px solid #fff;
   display: inline-block;
   color: #fff;
+  background-color: transparent;
   transition: .5s;
   transform: translateY(-40px);
   opacity: 0;
   visibility: hidden;
 }
 
-.box:hover .content a {
+.box:hover .btn-more {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
 }
 
-.content a:hover {
+.btn-more:hover {
   background: #fff;
   color: #060c21;
 }
