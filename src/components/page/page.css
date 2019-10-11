@@ -33,6 +33,7 @@
   text-decoration: none;
 
   transition: .5s;
+  z-index: 1000;
 }
 
 .link-return:hover {

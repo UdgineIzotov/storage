@@ -1,0 +1,125 @@
+:root {
+  --sea-1: #D4F1F4;
+  --sea-2: #75E6DA;
+  --sea-3: #189AB4;
+  --sea-4: #05445E;
+
+  --radius: 3px;
+
+  --animation-delay: 1s;
+}
+
+.animated-form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.animated-form {
+  display: grid;
+  width: 260px;
+  height: 300px;
+  padding: 30px;
+  grid-template-rows: repeat(4, auto);
+  grid-row-gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--radius);
+
+  box-shadow: 1px 1px 5px 1px var(--sea-2);
+  background: var(--sea-1);
+}
+
+.animated-form-caption {
+  margin: 0;
+  color: var(--sea-4);
+  text-align: center;
+}
+
+.animated-form-input {
+  padding: 10px;
+
+  background: transparent;
+  border: 1px solid var(--sea-2);
+  border-radius: var(--radius);
+
+  color: var(--sea-4);
+}
+
+.animated-form-input:focus {
+  box-shadow: 0 0 5px 0 var(--sea-2);
+} 
+
+.animated-form-input::placeholder { color: var(--sea-3); }
+.animated-form-input::-ms-input-placeholder { color: var(--sea-3); }
+
+.animated-form-button {
+  padding: 10px;
+  justify-self: center;
+
+  border: 1px solid var(--sea-4);
+  border-radius: var(--radius);
+
+  font-weight: bold;
+
+  background: transparent;
+  color: var(--sea-4);
+}
+
+.animated-form-button:hover {
+  cursor: pointer;
+  background: var(--sea-4);
+  color: var(--sea-1);
+}
+
+
+
+/* MAIN CSS SOURCE FOR ANIMATION */
+.animated-form {
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 500, 0, 1);
+  animation: form-fly-up 1s ease var(--animation-delay) forwards;
+}
+
+/* Generated with Bounce.js. Edit at http://bouncejs.com#%7Bs%3A%5B%7BT%3A%22t%22%2Ce%3A%22b%22%2Cd%3A1000%2CD%3A0%2Cf%3A%7Bx%3A0%2Cy%3A500%7D%2Ct%3A%7Bx%3A0%2Cy%3A0%7D%2Cs%3A2%2Cb%3A4%7D%5D%7D */
+
+@keyframes form-fly-up { 
+  0%     { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 500, 0, 1); }
+  4.5%   { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 257.367, 0, 1); }
+  9.01%  { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 60.011, 0, 1); }
+  13.51% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -43.71, 0, 1); }
+  17.92% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -69.609, 0, 1); }
+  29.03% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -16.143, 0, 1); }
+  34.63% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2.966, 0, 1); }
+  40.14% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 7.713, 0, 1); }
+  62.36% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.855, 0, 1); }
+  84.68% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.095, 0, 1); }
+  100%   { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+/* Generated with Bounce.js. Edit at http://bouncejs.com#%7Bs%3A%5B%7BT%3A%22t%22%2Ce%3A%22s%22%2Cd%3A1000%2CD%3A0%2Cf%3A%7Bx%3A0%2Cy%3A0%7D%2Ct%3A%7Bx%3A0%2Cy%3A-30%7D%2Cs%3A1%2Cb%3A4%7D%5D%7D */
+
+@keyframes animation { 
+  0%     { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  2.1%   { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -6.676, 0, 1); }
+  4.1%   { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -10.831, 0, 1); }
+  8.21%  { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -13.795, 0, 1); }
+  11.41% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -12.485, 0, 1); }
+  14.51% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -9.638, 0, 1); }
+  20.72% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -3.182, 0, 1); }
+  27.03% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.969, 0, 1); }
+  33.23% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2.063, 0, 1); }
+  45.75% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.472, 0, 1); }
+  58.26% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.309, 0, 1); }
+  83.28% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.046, 0, 1); }
+  100%   { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+
+
