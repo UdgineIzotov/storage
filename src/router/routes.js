@@ -8,6 +8,7 @@ import { CutoutTextPage } from '../tricks/cutout-text';
 import { AnimatedTextPage } from '../tricks/animated-text';
 import { SkewedCardsPage } from '../tricks/skewed-cards';
 import { AnimatedFormPage } from '../tricks/animated-form';
+import { MenusPage } from '../tricks/menus';
 
 export const routes = [
   { path: availableUrls.DEFAULT, render: () => (<Redirect to={availableUrls.HOME} />), exact: true },
@@ -16,4 +17,5 @@ export const routes = [
   { path: availableUrls.ANIMATED_TEXT,  component: AnimatedTextPage },
   { path: availableUrls.SKEWED_CARDS,  component: SkewedCardsPage },
   { path: availableUrls.ANIMATED_FORM,  component: AnimatedFormPage },
+  { path: availableUrls.MENUS,  component: MenusPage },
 ];

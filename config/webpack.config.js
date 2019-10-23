@@ -440,9 +440,6 @@ module.exports = function(webpackEnv) {
                 {
                   importLoaders: 2,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
-                  modules: true,
-                  localIdentName: isEnvProduction ? '[hash:base64:5]' : '[local]-[hash:base64:5]',
-                  camelCase: true
                 },
                 'sass-loader'
               ),
@@ -459,7 +456,8 @@ module.exports = function(webpackEnv) {
                   importLoaders: 2,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                   modules: true,
-                  getLocalIdent: getCSSModuleLocalIdent,
+                  localIdentName: isEnvProduction ? '[hash:base64:5]' : '[local]-[hash:base64:5]',
+                  camelCase: true
                 },
                 'sass-loader'
               ),

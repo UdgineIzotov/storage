@@ -1,0 +1,233 @@
+@import "../../assets/scss-helpers.scss";
+
+//vars
+$fg: #00bcd4;
+$bg: #673ab7;
+$pi: 3.14;
+
+
+$option-color: #3f51b5;
+$option-active-color: #ffc107;
+
+//config
+$menu-items: 6 + 1;
+$open-distance: 65px;
+$opening-angle: $pi*2;
+
+.menu_wrapper {
+  display: grid;
+}
+
+
+%menu-option {
+  border: none;
+  background: $option-color;
+  color: white;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px 1px $option-active-color;
+  }
+
+  &_active {
+    background: $option-active-color;
+  }
+}
+
+
+.menus-animate {
+  height: 30px;
+  border-radius: 30px;
+  
+  @extend %menu-option;
+}
+
+
+%goo{ filter: url('#shadowed-goo'); }
+
+%ball{
+  $size: 60px;
+
+  background: $fg;
+  border-radius: 100%;
+  width: $size;
+  height: $size;
+  margin-left: $size / -2;
+  position: absolute;
+  top: 20px;
+  color: white;
+  text-align: center;
+  line-height: $size;
+  transform: translate3d(0,0,0);
+  transition: transform ease-out 200ms;
+}
+
+.menus-options-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.menus-options-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  
+  @extend %menu-option;
+}
+
+.thanks {
+  font-size: 12px;
+  text-align: right;
+  color: white;
+
+  & a { color: $option-active-color; }
+}
+
+.menu_open{ display: none; }
+
+.menu_item{ @extend %ball; }
+
+.hamburger{
+  $width: 25px;
+  $height: 3px;
+
+  width: $width;
+  height: $height;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -$width/2;
+  margin-top: -$height/2;
+  transition: transform 200ms;
+}
+
+$hamburger-spacing: 8px;
+.hamburger1{
+  transform: translate3d(0,-$hamburger-spacing,0);
+}
+
+.hamburger2{
+  transform: translate3d(0,0,0);
+}
+
+.hamburger3{
+  transform: translate3d(0,$hamburger-spacing,0);
+}
+
+.menu_open:checked+.menu_open_button{
+  .hamburger1{
+    transform: translate3d(0,0,0) rotate(45deg); 
+  }
+  .hamburger2{
+    transform: translate3d(0,0,0) scale(0.1,1);
+  }
+  .hamburger3{
+    transform: translate3d(0,0,0) rotate(-45deg); 
+  }
+}
+
+.menu{
+  @extend %goo;
+  $width: 250px;
+  $height: 150px;
+  position: absolute;
+  left: 50%;
+  margin-left: -80px;
+  padding-top: 20px;
+  padding-left: 80px;
+  width: $width;
+  height: $height;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: left;
+}
+
+.menu_item{
+  &:hover{
+    background: white;
+    color: $fg;
+  }
+  @for $i from 1 through $menu-items{
+    &:nth-child(#{$i+2}){
+      transition-duration: 180ms;
+    }
+  }
+}
+
+.menu_open_button {
+  @extend %ball;
+  z-index: 2;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  transition-duration: 400ms;
+  transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+
+.menu_open_button:hover {
+  transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu_open:checked + .menu_open_button { 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu_open1:checked ~ .menu_item_type1 {
+  $items-count: 4;
+
+  transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  @for $i from 1 through $items-count {
+    &:nth-child(#{$i+2}){
+      transition-duration: 90ms+(100ms*$i);
+      transform: translate3d(80px*$i,0,0);
+    }
+  }
+}
+
+.menu-open2:checked ~ .menu-item_type2 {
+  $items-count: 4 + 1;
+
+  $open-distance: 85px;
+
+  transition-timing-function:cubic-bezier(0.935, 0.000, 0.340, 1.330);
+  @for $i from 1 through $items-count{
+    $angle:(($pi - $opening-angle)/2)+(($opening-angle/($menu-items - 1))*($i - 1));
+    
+    &:nth-child(#{$i+2}){
+      transition-duration:80ms+(100ms*$i);
+      transform: translate3d(cos($angle) * $open-distance, sin($angle) * $open-distance, 0);
+    }
+  }
+}
+
+.menu-open3:checked ~ .menu-item_type3 {
+  $items-count: 4;
+
+  $opening-angle: $pi - .2;
+  $open-distance: 95px;
+
+  transition-timing-function:cubic-bezier(0.935, 0.000, 0.340, 1.330);
+  @for $i from 1 through $items-count{
+    $angle:(($pi - $opening-angle)/2)+(($opening-angle/($menu-items - 1))*($i - 1));
+    
+    &:nth-child(#{$i+2}){
+      transition-duration:80ms+(80ms*$i);
+      transform:translate3d(cos($angle) * $open-distance, sin($angle) * $open-distance, 0);
+    }
+  }
+}
+
+.menu-open4:checked ~ .menu-item_type4 {
+  transition-timing-function:cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  @for $i from 1 through $menu-items{
+
+    &:nth-child(#{$i+2}){
+      transition-duration:90ms+(80ms*$i);
+      transform:translate3d((60px*$i),0,0);
+    }
+  }
+}
