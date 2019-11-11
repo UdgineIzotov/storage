@@ -5,5 +5,6 @@ export const availableUrls = {
   ANIMATED_TEXT:  '/animated-text',
   SKEWED_CARDS:  '/skewed-cards',
   ANIMATED_FORM:  '/animated-form',
-  MENUS:  '/menus'
+  MENUS:  '/menus',
+  SVG:  '/svg'
 }

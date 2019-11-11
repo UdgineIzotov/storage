@@ -12,10 +12,6 @@ export class Menus extends Component {
     menuOpened: false,
     timer: null
   }
-
-  constructor() {
-    super();
-  }
   
   processSelectMenu = currentMenu => {
     this.setState({ currentMenu });

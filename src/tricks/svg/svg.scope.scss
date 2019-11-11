@@ -1,0 +1,132 @@
+.wrapper {
+  max-width: 1600px;
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.wrapper-item {
+  padding: 15px;
+  position: relative;
+
+  &-center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* FIRST */
+
+.box {
+  $shadoved-color: rgba(0, 0, 0, .5);
+
+  position: relative;
+
+  width: 300px;
+  height: 300px; 
+  background: #001e2d;
+  box-shadow:  0 20px 50px $shadoved-color;
+
+  & .content {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+
+    border: 2px solid #ffeb3b;
+    padding: 15px;
+    box-shadow: 0 5px 10px $shadoved-color;
+    text-align: center;
+    color: white;
+
+    & h1 {
+      font-size: 30px;
+      margin: 0 0 10px;
+    }
+  }
+
+  & svg,
+  & svg rect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+  }
+
+  & svg rect {
+    stroke: #0093ff;
+    stroke-width: 4;
+    stroke-dasharray: 300;
+    animation: animate1 3s linear infinite;
+  }
+}
+
+@keyframes animate1 {
+  0% { stroke-dashoffset: 600; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* SECOND */
+
+.sec {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: #eb01a5;
+  background-image: url(./girl.jpg); /* fallback */
+  background: linear-gradient(rgba(255, 49, 156, 0.3), rgba(255, 49, 156, 0.8)), url(./girl.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.sec2 {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+}
+
+.curve {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  & path { fill: #fff; }
+}
+
+/* THIRD */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+.svg3 {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 300px;
+  background: red;
+  color: white;
+  font-family: 'Montserrat', serif;
+
+  & text {
+    font-size: 100px;
+    fill: rgba(0,0,0, .1);
+    stroke-width: 1px;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-dasharray: 80;
+    animation: animate3 1s linear infinite;
+  }
+}
+
+@keyframes animate3 {
+  100% { stroke-dashoffset: 160; }
+}
+
+
